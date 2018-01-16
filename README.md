@@ -25,7 +25,7 @@ After a few seconds, you should see there are wallet.dat file as well as other l
 
 ### Encrypted wallet
 
-If you your wallet is encrypted, before you run the docker by docker-compose command, you should modify the docker-compose.yml file by adding your wallet password to DOPASS environment. 
+If your wallet is encrypted, before you run the docker by docker-compose command, you should modify the docker-compose.yml file by adding your wallet password to DOPASS environment. 
 
 For example, if your password is 12345678, it should look like:
 
