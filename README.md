@@ -54,7 +54,7 @@ To check the wallet status, you can take a look at the log file DeepOnionConf/de
 tail -f DeepOnionConf/debug.log
 ```
 
-To check the staking status, see DeepOnionConf/staking.log. This file should update every one hour. If you see the staking status is false, try to check it one hour later.
+To check the staking status, see DeepOnionConf/staking.log. This file should be updated hourly. If you see the staking status is false, try to check it again one hour later.
 
 ### Shutdown
 
@@ -67,4 +67,4 @@ sudo docker-compose down
 ### Donation
 
 As you can see there is a parameter for you to donate a portion of you staking incomes to the developer. By default, it is set to 0.1, which means you agree to donate 10% of you staking incomes to the developer. This feature could be turned off by setting Donate_portion_of_staking to 0. I appreciate for your generous donation. My DeepOnion address 
-is DYjzTLpR6Bz9efLV42XvvoQPypd2nFzd2B, you can also donate manually.
+is **DYjzTLpR6Bz9efLV42XvvoQPypd2nFzd2B**, you can also donate manually.
