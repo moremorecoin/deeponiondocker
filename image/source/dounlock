@@ -1,8 +1,0 @@
-#!/bin/sh
-if [ ! -z $DOPASS ]; then
-echo "PassSet as ENV" >> /root/.DeepOnion/staking.log
-DeepOniond -conf=/root/DeepOnion.conf walletlock
-DeepOniond -conf=/root/DeepOnion.conf walletpassphrase $DOPASS 3610 true
-fi
-date >> /root/.DeepOnion/staking.log
-DeepOniond -conf=/root/DeepOnion.conf getstakinginfo >> /root/.DeepOnion/staking.log

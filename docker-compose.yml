@@ -1,10 +1,9 @@
 version: '3'
 services:
-  DO:
+  onion:
     restart: always
-    environment:
-     - DOPASS=
-     - Donate_portion_of_staking=0.1
+    ports:
+    - 9998:9999
     volumes:
      - ./DeepOnionConf:/root/.DeepOnion
-    image: morecoin/deeponion
+    image: morecoin/deeponion:1.0

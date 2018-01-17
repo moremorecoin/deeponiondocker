@@ -1,5 +1,4 @@
     apt-get update
-    apt-get upgrade -y
     apt-get install -y build-essential libtool autotools-dev autoconf pkg-config libssl-dev apt-utils
     apt-get install -y libboost-all-dev
     apt-get install -y libqrencode-dev
@@ -8,9 +7,9 @@
     apt-get install -y git
 
     apt-get install -y software-properties-common
-    #add-apt-repository ppa:bitcoin/bitcoin
-    echo "deb-src http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu zesty main" > /etc/apt/sources.list.d/bitcoin-ubuntu-bitcoin-bionic.list
-    echo "deb http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu zesty main" >> /etc/apt/sources.list.d/bitcoin-ubuntu-bitcoin-bionic.list
+    add-apt-repository ppa:bitcoin/bitcoin
+    #echo "deb-src http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu zesty main" > /etc/apt/sources.list.d/bitcoin-ubuntu-bitcoin-bionic.list
+    #echo "deb http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu zesty main" >> /etc/apt/sources.list.d/bitcoin-ubuntu-bitcoin-bionic.list
     apt-get update 
     apt-get install -y --allow-unauthenticated libdb4.8-dev libdb4.8++-dev
 
