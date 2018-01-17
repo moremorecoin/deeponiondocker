@@ -20,31 +20,29 @@ Last, run it by:
 cd deeponiondocker
 sudo docker-compose up -d
 ```
+> If you want to build the docker instance on your own, simply go to the image folder and run the build.sh like this:
+> ```
+> cd deeponiondocker/image
+> sudo sh build.sh
+> ```
+> After you got the docker built, go back to deeponiondocker folder to launch it:
+> ```
+> cd ..
+> sudo docker-compose up -d
+> ```
 
 After a few seconds, you should see there are wallet.dat file as well as other log files in DeepOnionConf folder, you can then copy your own wallet.dat file into DeepOnionConf folder to replace the auto-generated wallet.dat file. After DeepOnion syncronized all the blocks, your staking will begin automatically. 
 
 ### Encrypted wallet
 
-If your wallet is encrypted, before you run the docker by docker-compose command, you should modify the docker-compose.yml file by adding your wallet password to DOPASS environment. 
-
-For example, if your password is 12345678, it should look like:
+If your wallet is encrypted, after you start the docker, you can run unlock_wallet_for_staking.pl to unlock your wallet for staking only:
 
 ```
-version: '3'
-services:
-  DO:
-    restart: always
-    environment:
-     - DOPASS=12345678
-     - Donate_portion_of_staking=0.1
-    volumes:
-     - ./DeepOnionConf:/root/.DeepOnion
-    image: morecoin/deeponion 
+perl unlock_wallet_for_staking.pl
 ```
 
-Note: if your password contains '$', please type '$$' instead. This is because '$' is a special character in docker compose file, you have to type '$$' to tell docker compose that this is a single '$'.
+You will be asked for password to unlock the wallet. After you type it in, the password will be passed to the docker instance to unlock the wallet. You don't have to write down your password into docker-compose.yml file anymore.
 
-The process to unlock wallet for staking will run every hour, in the worst case, your wallet will start staking 59 minutes after the docker instance started to run.
 
 ### Monitoring
 
@@ -54,7 +52,22 @@ To check the wallet status, you can take a look at the log file DeepOnionConf/de
 tail -f DeepOnionConf/debug.log
 ```
 
-To check the staking status, see DeepOnionConf/staking.log. This file should be updated hourly. If you see the staking status is false, try to check it again one hour later.
+To check the staking status, see DeepOnionConf/status.log. This file should be updated every 10 minutes. If you see the staking status is false, try to check it again 10 minutes later, please make sure you have unlocked your wallet if it is encrypted.
+
+If you want to use command line on your own -- to see your wallet address, send coin, check balance etc, you can attach to the docker instance this way:
+
+```
+sudo docker exec -it deeponion_onion_1 bash
+```
+
+To show some commands for use:
+
+```
+DeepOniond help
+```
+
+After you are done, type 'exit' to leave the console. 
+
 
 ### Shutdown
 
@@ -66,5 +79,4 @@ sudo docker-compose down
 
 ### Donation
 
-As you can see there is a parameter for you to donate a portion of you staking incomes to the developer. By default, it is set to 0.1, which means you agree to donate 10% of you staking incomes to the developer. This feature could be turned off by setting Donate_portion_of_staking to 0. I appreciate for your generous donation. My DeepOnion address 
-is **DYjzTLpR6Bz9efLV42XvvoQPypd2nFzd2B**, you can also donate manually.
+My DeepOnion address is **DUwpwQSL68Eu4ExaYVS8XgDTPRgTwUZwwM**, please donate to help this work. 
