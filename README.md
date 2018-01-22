@@ -1,7 +1,7 @@
 # DeepOnion Docker
 ## Staking DeepOnion in the Could, or anywhere you want!
 
-Have you ever thought of staking your DeepOnion in Amazon Cloud? Or any of your VPS servers? Or even any of your old computers but get pushed back because of the ambiguous installation process? 
+Have you ever thought of staking your DeepOnion(https://deeponion.org) in Amazon Cloud? Or any of your VPS servers? Or even any of your old computers but get pushed back because of the ambiguous installation process? 
 
 Recently I spend quite some time to compile the source code to built a docker instance. The compiling time is around 30 minutes each round, and I compiled it so many times to develop this docker instance so you don't have to spend the time again. If you know what docker is, you probably know you will love this solution. Because it is simple, straight forward, only takes minutes to run your wallet anywhere to start staking. 
 
