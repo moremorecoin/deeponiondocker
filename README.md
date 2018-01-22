@@ -155,3 +155,7 @@ services:
 ### Donation
 
 My DeepOnion address is **DUwpwQSL68Eu4ExaYVS8XgDTPRgTwUZwwM**, please donate to help this work. By default, the docker wallet donates 10% of your staking incomes to the above address every time before it backups your wallet file, if you don't feel like this idea, please set Donate_portion_of_staking to 0 to disable it before you start the docker.
+
+### Disclaimer
+
+I tried my best to make it secure and easy to use, but you still have to do your own homework and use it at your own risk.
