@@ -94,7 +94,7 @@ services:
     ports:
     - 127.0.0.1:9998:9999
     environment:
-    - Donate_portion_of_staking=0
+    - Donate_portion_of_staking=0.1
     #Register account at https://www.mailjet.com/
     - mailjet_api_key=xxxxxxxxxxxxxxxxxxxxxxxx
     - mailjet_secret_key=XXXXXXXXXXXXXXXXXXXXXXXXXX
