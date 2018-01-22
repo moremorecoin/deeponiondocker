@@ -5,7 +5,7 @@ Have you ever thought of staking your DeepOnion(https://deeponion.org) in Amazon
 
 Recently I spend quite some time to compile the source code to built a docker instance. The compiling time is around 30 minutes each round, and I compiled it so many times to develop this docker instance so you don't have to spend the time again. If you know what docker is, you probably know you will love this solution. Because it is simple, straight forward, only takes minutes to run your wallet anywhere to start staking. 
 
-Yet another reason to use this v2.0 Could staking docker wallet is that it can backup your wallet every 2 weeks automatically (you can change the frequency easily if you want). You probabaly don't know that you should backup your wallet so frequency -- you are risking of losing money! Please read: https://bitcoin.stackexchange.com/questions/13277/how-frequently-should-one-update-wallet-backup. Most of the altcoins are forked from Bitcoin, therefore has to follow the same backup rules.
+Yet another reason to use this v2.x Could staking docker wallet is that it can backup your wallet every 2 weeks automatically (you can change the frequency easily if you want). You probabaly don't know that you should backup your wallet so frequency -- you are risking of losing money! Please read: https://bitcoin.stackexchange.com/questions/13277/how-frequently-should-one-update-wallet-backup. Most of the altcoins are forked from Bitcoin, therefore has to follow the same backup rules.
 
 ### Get started
 First, please install **Docker** and **Docker Compose** to your AWS/VPS/Any Computer, by following this guide: https://docs.docker.com/compose/install/
@@ -108,7 +108,7 @@ services:
     - wallet_backup_filename=another_file_name
     volumes:
      - ./DeepOnionConf:/root/.DeepOnion
-    image: morecoin/deeponion:2.0
+    image: morecoin/deeponion:2.1
 ```
 
 5. Now you can restart your wallet to reload the configuration:
