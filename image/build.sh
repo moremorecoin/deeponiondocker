@@ -1,1 +1,1 @@
-docker build -t morecoin/deeponion:2.0 .
+docker build -t morecoin/deeponion:2.1 .
