@@ -122,7 +122,7 @@ perl unlock_wallet_for_staking.pl
 ```
 7. Check the status.log for a few minutes to make sure the staking is started:
 ```
-$ tail -f DeepOnionConf/statue.log
+$ tail -f DeepOnionConf/status.log
 Wallet starting up ...
 Please use unlock_wallet_for_staking.pl to unlock wallet
 Password received, trying to unlock wallet for staking
