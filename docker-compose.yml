@@ -3,7 +3,19 @@ services:
   onion:
     restart: always
     ports:
-    - 9998:9999
+    - 127.0.0.1:9998:9999
+    environment:
+    - Donate_portion_of_staking=0.1
+    #Register account at https://www.mailjet.com/
+    - mailjet_api_key=
+    - mailjet_secret_key=
+    #send backup wallet file to this email address
+    - mail_to=
+    - mail_sender_name=
+    #title and content of the backup email
+    - mail_subject=
+    #wallet filename, if you don't want it to be wallet.dat
+    - wallet_backup_filename=
     volumes:
      - ./DeepOnionConf:/root/.DeepOnion
-    image: morecoin/deeponion:1.0
+    image: morecoin/deeponion:2.0
